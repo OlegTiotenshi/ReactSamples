@@ -9,3 +9,17 @@ h1 {
   margin-bottom: 40px;
   margin-top: 24px;
 }
+
+a {
+  color: lightblue;
+  font-size: 35px;
+}
+
+nav a {
+  margin: 15px;
+}
+
+nav {
+  background-color: #0c1a29;
+  padding: 5px;
+}
