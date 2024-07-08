@@ -5,12 +5,13 @@ import NotFound from './components/NotFound'
 import MainLayout from './layouts/MainLayout'
 import Courses from './components/courses_app/components/Courses'
 import SingleCourse from './components/courses_app/components/SingleCourse'
+import BookLibraryApp from './components/book_library_app/frontend/BookLibraryApp'
 import './App.css'
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="app">
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Home />} />
@@ -18,6 +19,7 @@ function App() {
             <Route path="todo" element={<TodoApp />} />
             <Route path="courses" element={<Courses />} />
             <Route path="courses/:courseSlug" element={<SingleCourse />} />
+            <Route path="books" element={<BookLibraryApp />} />
           </Route>
         </Routes>
       </div>
