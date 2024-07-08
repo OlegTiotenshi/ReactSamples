@@ -1,6 +1,6 @@
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import courses from '../data/courses'
 import { useEffect } from 'react'
+import courses from '../data/courses'
 
 const SingleCourse = () => {
   const params = useParams()
