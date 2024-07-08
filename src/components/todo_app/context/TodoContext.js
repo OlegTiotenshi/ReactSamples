@@ -1,5 +1,8 @@
 import { createContext } from 'react'
 
-const TodoContext = createContext()
+const TodoContext = createContext({
+  delete: () => {},
+  toggle: () => {},
+})
 
 export default TodoContext
