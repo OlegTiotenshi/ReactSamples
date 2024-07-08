@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
+import TodoContext from './context/TodoContext'
 import TodoForm from './components/Todos/TodoForm'
 import TodoList from './components/Todos/TodoList'
 import TodosActions from './components/Todos/TodosActions'
@@ -54,11 +55,15 @@ function TodoApp() {
           completedTodosExist={!!completedTodosCount}
         />
       )}
-      <TodoList
-        todos={todos}
-        deleteTodo={deleteTodoHandler}
-        toggleTodo={toggleTodoHandler}
-      />
+
+      <TodoContext.Provider
+        value={{
+          delete: deleteTodoHandler,
+          toggle: toggleTodoHandler,
+        }}
+      >
+        <TodoList todos={todos} />
+      </TodoContext.Provider>
       {!!completedTodosCount && (
         <h2>{`You have completed ${completedTodosCount} ${
           completedTodosCount > 1 ? 'todos' : 'todo'
