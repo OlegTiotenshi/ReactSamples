@@ -1,6 +1,6 @@
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import courses from '../data/courses'
 import { useEffect } from 'react'
+import courses from '../data/courses'
 
 const SingleCourse = () => {
   const params = useParams()
@@ -15,7 +15,9 @@ const SingleCourse = () => {
 
   return (
     <>
-      <h1>{course?.title}</h1>
+      <header className="app-header">
+        <h1>{course?.title}</h1>
+      </header>
       <h3>{course?.slug}</h3>
       <h3>{course?.id}</h3>
       <Link to=".." relative="path">

@@ -46,7 +46,9 @@ function TodoApp() {
 
   return (
     <>
-      <h1>Todo App</h1>
+      <header className="app-header">
+        <h1>Todo App</h1>
+      </header>
       <TodoForm addTodo={addTodoHandler} />
       {!!todos.length && (
         <TodosActions

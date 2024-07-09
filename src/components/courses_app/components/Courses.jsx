@@ -32,7 +32,9 @@ const Courses = () => {
 
   return (
     <>
-      <h1>{sortKey ? `Courses sorted by ${sortKey}` : 'Courses'}</h1>
+      <header className="app-header">
+        <h1>{sortKey ? `Courses sorted by ${sortKey}` : 'Courses App'}</h1>
+      </header>
       {sortedCourses.map((course) => (
         <div key={course.id}>
           <Link to={course.slug} className="courseLink">
