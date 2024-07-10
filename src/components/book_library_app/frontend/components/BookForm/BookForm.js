@@ -29,7 +29,7 @@ const BookForm = () => {
   }
 
   const handleAddRandomViaAPI = async () => {
-    dispatch(fetchBook())
+    dispatch(fetchBook('http://localhost:4000/random-book'))
   }
 
   return (
